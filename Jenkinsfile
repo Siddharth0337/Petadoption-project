@@ -10,7 +10,7 @@ pipeline{
             steps{
                 // Get the source code from the git repo
                 checkout scm
-                #Run wrapper commands
+                //run wrapper commands
                 sh "./mvnw clean compile"
                 echo "building the project with maven complile"
             }
