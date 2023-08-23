@@ -1,10 +1,15 @@
 pipeline{
     agent any
+    tools {
+        // Specify the name of the Git installation configured in Jenkins
+        git 'MyGitInstallation'
+   
+    }
     stages{
         stage('Build'){
             steps{
-                #get the souce code from git repository
-                git 'https://github.com/Siddharth0337/Petadoption-project.git'
+                // Get the source code from the git repo
+                checkout scm
                 #Run wrapper commands
                 sh "./mvnw clean compile"
                 echo "building the project with maven complile"
