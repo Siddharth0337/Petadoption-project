@@ -20,7 +20,7 @@ pipeline{
             stage('Test'){
                 steps{
 
-                #Run wrapper commands
+                //Run wrapper commands
                 sh "./mvnw clean test"
                 echo "Testing the project with maven Test"
             }
@@ -29,7 +29,7 @@ pipeline{
              stage('Package'){
                 steps{
 
-                #Run wrapper commands
+                //Run wrapper commands
                 sh "./mvnw clean package"
                 echo "packaging the project with maven Package"
             }
