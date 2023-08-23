@@ -7,4 +7,4 @@ COPY target/ /app
 #set working directory as app
 WORKDIR /app
 #Run the jar file
-CMD java -jar petadoption-0.0.1-SNAPSHOT.jar --spring.config.name = application.properties
+CMD java -jar 
